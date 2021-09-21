@@ -1,0 +1,24 @@
+{
+    "products": [
+      {
+        "item": "cup cake",
+        "category": "sweets",
+        "price": 8 ,
+        "id": 1
+      },
+      {
+        "item": "popcorn",
+        "category": "snacks",
+        "price": 8,
+        "id": 2
+      },
+      {
+        "item": "leas",
+        "category": "products",
+        "price": 15,
+        "id": 3
+      }
+    ],
+    "cart": [],
+    "users": []
+  }
