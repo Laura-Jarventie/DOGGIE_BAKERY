@@ -5,6 +5,8 @@ const cartReducer = (state = [], action) => {
   let updatedItemIndex;
 
   switch (action.type) {
+    case actionTypes.INIT_CARTPRODUCTS:
+      return action.payload;
     case actionTypes.ADD_TO_CART:
       updatedCart = [...state];
       // {...state} jos olis objecti niin kopion saa näin

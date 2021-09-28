@@ -1,8 +1,17 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 import "../scss/Header.scss";
 
 const Header = () => {
+  const cart = useSelector((state) => state.cart);
+  let count = 0;
+
+  cart.map((item) => {
+    count += item.quantity;
+    return count;
+  });
+
   return (
     <header>
       <div>
@@ -22,7 +31,7 @@ const Header = () => {
           <li>
             <NavLink className="nav" to="/cart" exact>
               {" "}
-              Shoppin cart{" "}
+              Shoppin cart ({count})
             </NavLink>
           </li>
         </ul>

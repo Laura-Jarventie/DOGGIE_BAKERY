@@ -15,6 +15,16 @@ export const initializeProducts = () => {
   };
 };
 
+export const initializeCart = () => {
+  return async (dispatch) => {
+    const cart = await getCart();
+    dispatch({
+      type: INIT_CARTPRODUCTS,
+      payload: cart,
+    });
+  };
+};
+
 export const addToCart = (product) => {
   return async (dispatch) => {
     dispatch({
